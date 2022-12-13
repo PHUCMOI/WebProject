@@ -153,7 +153,16 @@ const formatMoney = (number) => {
 
 // renderProduct(items);
 
-
+//Thanh Toán
+$("#btn-payment").click(function(){
+  if(items.length == 0)
+    alert("Không có sản phẩm nào trong giỏ hàng. Vui lòng chọn mua sản phẩm.");
+  else
+  {
+    var phantuchon = $("#payment");
+      phantuchon.append("<a  href=./payment.php>Thanh toán</a>");
+  }
+});
 //Tính tiền
 
 const updateTotalMoney = () => {
