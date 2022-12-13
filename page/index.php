@@ -393,6 +393,36 @@
               <img src="../public/img/suggest3.png" alt="" />
             </div>
           </div>
+          <div class="suggest-item">
+            <div class="suggest-image" data-bs-toggle="tooltip" data-bs-placement="top" title="" >
+              <img src="../public/img/suggest4.png" alt="" data-toggle="tooltip" data-placement="top-0" title="Tooltip on left"/>
+            </div>
+          </div>
+          <div class="suggest-item">
+            <div class="suggest-image">
+              <img src="../public/img/suggest5.png" alt="" />
+            </div>
+          </div>
+          <div class="suggest-item">
+            <div class="suggest-image">
+              <img src="../public/img/suggest6.png" alt="" />
+            </div>
+          </div>
+          <div class="suggest-item">
+            <div class="suggest-image" data-bs-toggle="tooltip" data-bs-placement="top" title="" >
+              <img src="../public/img/suggest7.png" alt="" data-toggle="tooltip" data-placement="top-0" title="Tooltip on left"/>
+            </div>
+          </div>
+          <div class="suggest-item">
+            <div class="suggest-image">
+              <img src="../public/img/suggest8.png" alt="" />
+            </div>
+          </div>
+          <div class="suggest-item">
+            <div class="suggest-image">
+              <img src="../public/img/suggest9.png" alt="" />
+            </div>
+          </div>
           <!-- <div class="suggest-item">
             <div class="suggest-image">
               <img src="../public/img/suggest4.png" alt="" />

@@ -20,6 +20,7 @@ const simple = (initial) => {
   ];
 };
 
+//Giống như useState React
 const [param, paramSet] = simple(1);
 const [param1, param1Set] = simple(1);
 const [param2, param2Set] = simple(1);
@@ -83,6 +84,8 @@ const productJacket = products.filter((p) => {
   return p.category == "Jacket";
 });
 const productItemSidabar = document.querySelector(".product-item-sidebar");
+
+//Render các sản phẩm trong giỏ hàng
 const renderProductSidebar = () => {
   if (items.length == 0) {
     productItemSidabar.innerHTML = "Chưa có sản phẩm";
@@ -135,7 +138,7 @@ const deleteProduct = (id, size) => {
   if (isConfirm) {
     items = items.filter((p) => p.id !== id);
     setDataToLocalStorage(items);
-    updateTotalCart();
+    updateTotalCart();//??Hàm nay ở đâu???
     renderProductSidebar(items);
   }
 };
@@ -570,6 +573,8 @@ renderCardJacket(productJacket);
 renderCardTshirt(productTshirt);
 renderProductSidebar(items);
 
+
+//click sản phẩm
 $("#navbarDropdown").click(function () {
   $(".dropdown-menu").slideToggle(300, "linear");
 });
@@ -578,15 +583,19 @@ $(".dropdown-menu").mouseleave(function () {
   $(this).slideToggle(300, "linear");
 });
 
+//Thêm class open vào thẻ cha để hiện ô tìm kiếm
 btnSearch.addEventListener("click", function () {
   this.parentElement.classList.toggle("open");
   this.previousElementSibling.focus();
 });
 
+//Click giỏ hàng, hiện giỏ hàng 
 $(".shopping-cart").click(function () {
   $(".cart").css("right", "0");
   $("#overlay").css("display", "block");
 });
+
+//tắt giỏ hàng
 $(".close-cart").click(function () {
   $(".cart").css("right", "-450px");
   $("#overlay").css("display", "none");
@@ -596,6 +605,7 @@ $("#overlay").click(function () {
   $("#overlay").css("display", "none");
 });
 
+//Hiện thanh menu trên các thiết bị màn nhỏ
 $(".menu-icon").click(function () {
   $(".menu ul").css("left", "0");
   $("#overlay").css("display", "block");
@@ -611,6 +621,8 @@ $(window).resize(() => {
     $("#overlay").css("display", "none");
   }
 });
+
+//Hiện quảng cáo khuyến mãi 
 function loadPopup() {
   $(".popup-coupon").css("top", "50%");
   $("#overlay").css("display", "block");
@@ -618,7 +630,7 @@ function loadPopup() {
 setTimeout(function () {
   loadPopup();
 }, 1500);
-
+//ẩn
 $(".cancel-popup").click(function () {
   $(".popup-coupon").css("display", "none");
   $("#overlay").css("display", "none");
@@ -628,6 +640,7 @@ $("#overlay").click(function () {
   $("#overlay").css("display", "none");
 });
 
+//Chuyen slide https://kenwheeler.github.io/slick/
 $(".image-slider").slick({
   dots: true,
   infinite: true,
@@ -649,6 +662,7 @@ $(".image-slider").slick({
   ],
 });
 
+//Chuyen slide tren dien thoai
 $(".image-mini").slick({
   infinite: true,
   speed: 300,
@@ -690,13 +704,17 @@ $(".image-mini").slick({
 });
 
 $(".suggest-content").slick({
+  dots: true,
   infinite: true,
+	arrows:true,
   speed: 300,
   arrows: false,
   autoplay: true,
   slidesToShow: 3,
   centerMode: true,
-  autoplaySpeed: 3000,
+  autoplaySpeed: 1000,
+  prevArrow: `<button type='button' class='slick-prev pull-left slick-arrow'><i class='fa fa-angle-left' aria-hidden='true'></i></button>`,
+  nextArrow: `<button type='button' class='slick-next pull-right slick-arrow'><i class='fa fa-angle-right' aria-hidden='true'></i></button>`,
   responsive: [
     {
       breakpoint: 991,
@@ -736,6 +754,7 @@ $(".slider-for").slick({
   asNavFor: ".slider-nav",
 });
 $(".slider-nav").slick({
+
   slidesToShow: 3,
   slidesToScroll: 1,
   asNavFor: ".slider-for",
@@ -783,6 +802,7 @@ $(function () {
   });
 });
 
+//Sao chep ma giam gia
 const BtnCoppyRight = document.querySelectorAll(".btn-test");
 Array.from(BtnCoppyRight).forEach((btn) => {
   btn.addEventListener("click", () => {
@@ -798,6 +818,7 @@ Array.from(BtnCoppyRight).forEach((btn) => {
   });
 });
 
+//Load xong web tren di dong xu ly mo san pham
 $(document).ready(function () {
   $(".navbar a.dropdown-toggle").on("click", function (e) {
     var $el = $(this);
@@ -813,7 +834,7 @@ $(document).ready(function () {
 
 mybutton = document.getElementById("myBtn");
 const header = document.getElementById("header");
-// When the user scrolls down 20px from the top of the document, show the button
+// Khi scroll xuong hon 60px thi hien btn tro len tren
 window.onscroll = function () {
   scrollFunction();
 };
