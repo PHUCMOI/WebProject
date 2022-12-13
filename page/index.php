@@ -10,7 +10,7 @@
       type="image/x-icon"
     />
     <link rel="icon" href="../public/img/favicon (2).ico" type="image/x-icon" />
-    <title>DEGREY®</title>
+    <title>DEGRY®</title>
 
     <link rel="stylesheet" href="../libary/bootstrap/bootstrap.min.css" />
     <link
