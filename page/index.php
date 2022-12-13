@@ -1,3 +1,11 @@
+<?php
+  session_start();
+  ob_start();
+  if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
+  }else{
+    header('location: signup.php');
+  }
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -10,7 +18,7 @@
       type="image/x-icon"
     />
     <link rel="icon" href="../public/img/favicon (2).ico" type="image/x-icon" />
-    <title>DEGRY®</title>
+    <title>DEGERY®</title>
 
     <link rel="stylesheet" href="../libary/bootstrap/bootstrap.min.css" />
     <link

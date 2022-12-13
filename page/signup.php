@@ -1,3 +1,25 @@
+<?php
+  session_start();
+  ob_start();
+  $_SESSION['loggedin'] = false;
+  if(isset($_GET['Submit'])&&($_GET['Submit']=="dangky"))
+  {
+  include "./connect.php";
+  $UserName= $_GET['useName'];
+  $Pass=$_GET['pass'];
+  $Gmail= $_GET['gmail'];
+  $MaKH = $Gmail;
+  $str = "insert into khang values ('$MaKH', '$UserName','$Pass','$Gmail')";
+  if($connect->query($str)==true){
+  echo "<script type='text/javascript'>alert('Thêm thành công');</script>";
+  header('location: login.php');
+  }
+  else{
+    echo "<script type='text/javascript'>alert('Thêm không thành công');</script>";
+  }
+  $connect->close();
+  }
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -182,21 +204,21 @@
       <div class="wapper-heading">
         <h1>Tạo tài khoản</h1>
       </div>
-      <form onsubmit="signup()">
+      <form method="get">
         <div class="input__field">
-          <input id="username" type="text" placeholder="User Name" />
+          <input id="username" type="text" placeholder="User Name" name="useName"/>
         </div>
 
         <div class="input__field">
-          <input id="email" type="text" placeholder="Email" />
+          <input id="email" type="text" placeholder="Email" name="gmail"/>
         </div>
         <div class="input__field">
-          <input id="password" type="password" placeholder="Password" />
+          <input id="password" type="password" placeholder="Password" name="pass"/>
         </div>
-        <div class="input__field">
+        <div class="input__field"> 
           <input id="password" type="password" placeholder="Confirm Password" />
         </div>
-        <button id="btnSignup" class="btn btn-signup">Đăng ký</button>
+        <button id="btnSignup" class="btn btn-signup" name="Submit" value="dangky">Đăng ký</button>
         <a href="login.php" class="login-link">Đăng nhập</a>
       </form>
     </div>
