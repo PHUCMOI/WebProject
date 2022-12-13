@@ -10,7 +10,7 @@
       type="image/x-icon"
     />
     <link rel="icon" href="../public/img/favicon (2).ico" type="image/x-icon" />
-    <title>DEGRY®</title>
+    <title>DEGERY®</title>
 
     <link rel="stylesheet" href="../libary/bootstrap/bootstrap.min.css" />
     <link
