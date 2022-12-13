@@ -254,12 +254,12 @@
                   <li>Bạn cũng có thể nhập mã giảm giá ở trang thanh toán.</li>
                 </ul>
               </div>
-              <div class="discount-form text-center">
+              <div class="discount-form text-center" id = "btn-payment">
                 <button class="button-82-pushable" role="button">
                   <span class="button-82-shadow"></span>
                   <span class="button-82-edge"></span>
-                  <span class="button-82-front text">
-                    <a href="./payment.php">Thanh toán</a>
+                  <span class="button-82-front text" id = "payment">
+                    Thanh toán
                   </span>
                 </button>
               </div>

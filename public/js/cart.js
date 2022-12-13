@@ -153,16 +153,6 @@ const formatMoney = (number) => {
 
 // renderProduct(items);
 
-//Thanh Toán
-$("#btn-payment").click(function(){
-  if(items.length == 0)
-    alert("Không có sản phẩm nào trong giỏ hàng. Vui lòng chọn mua sản phẩm.");
-  else
-  {
-    var phantuchon = $("#payment");
-      phantuchon.append("<a  href=./payment.php>Thanh toán</a>");
-  }
-});
 //Tính tiền
 
 const updateTotalMoney = () => {
@@ -194,6 +184,18 @@ updateTotalMoney();
 renderProduct(items);
 renderProductSidebar(items)
 
+//Thanh toán
+$("#btn-payment").click(function(){
+  if(items.length == 0)
+    alert("Không có sản phẩm nào trong giỏ hàng. Vui lòng chọn mua sản phẩm.");
+  else 
+  {
+    $(document).ready( function() {
+      url = "./payment.php";
+      $(location).attr("href", url);
+  })
+  }
+})
 
 // Hiện thị giỏ hàng
 $(".shopping-cart").click(function(){
