@@ -1,3 +1,11 @@
+<?php
+  session_start();
+  ob_start();
+  if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
+  }else{
+    header('location: signup.php');
+  }
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
