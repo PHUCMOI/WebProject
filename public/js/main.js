@@ -8,7 +8,7 @@ const cardPantsEl = document.querySelector(".product-list-pants");
 const btnAddToCart = document.querySelector(".btn-add-to-cart");
 const searchInput = document.querySelector(".search-input");
 const searchFormInputEl = document.querySelector(".seach-input");
-    //helllllo
+alert("hello")
 
 let items = getDataFromLocalStorage();
 const simple = (initial) => {
