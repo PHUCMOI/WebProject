@@ -110,6 +110,8 @@ const deleteProduct = (id, size) => {
     setDataToLocalStorage(items);
     updateTotalCart();
     renderProduct(items);
+    updateTotalMoneysidebar()
+    updateTotalMoney()
   }
 };
 

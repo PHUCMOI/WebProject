@@ -1,6 +1,10 @@
 <?php
+  ini_set('display_errors', '1');
+  ini_set('display_startup_errors', '1');
+  error_reporting(E_ALL);
   session_start();
   ob_start();
+
   if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
   }else{
     header('location: signup.php');
@@ -88,7 +92,7 @@
         </div>
       </div>
     </section>
-    <div id="overlay"></div>
+    <!-- <div id="overlay"></div> -->
     <section class="cart">
       <div class="cart-title d-flex justify-content-center border-bottom position-relative">
         <i class="fa-solid fa-cart-shopping"></i><h2>Giỏ hàng</h2>
@@ -99,7 +103,7 @@
       <div class="product-item-sidebar">
         <div class="container">
           <div class="row">
-            <div class="product-item d-flex border">
+            <!-- <div class="product-item d-flex border">
               <div class="image col-lg-4">
                 <img src="../public/img/T-Shirt/t6.png" alt="" />
               </div>
@@ -131,7 +135,7 @@
                   <h3 class="text-danger fw-bold text-start" id="total-product" >500.000 VND</h3>
                 </div>
               </div>
-            </div>
+            </div> -->
           </div>
         </div>
       </div>
@@ -264,14 +268,14 @@
         </div>
       </div>
     </section>
-    <section class="popup-coupon">
+    <!-- <section class="popup-coupon">
       <div class="popup-image position-relative" >
         <img src="../public/img/popup/popup-discount.png" alt="popup-discount-code">
         <button class="cancel-popup position-absolute top-0 start-100 translate-middle " >
           <i class="fa-solid fa-xmark"></i>
         </button>
       </div>
-    </section>
+    </section> -->
     <section class="card">
       <div class="container">
         <div class="jacket my-4">
