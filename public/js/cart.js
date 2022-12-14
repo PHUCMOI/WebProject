@@ -110,6 +110,8 @@ const deleteProduct = (id, size) => {
     setDataToLocalStorage(items);
     updateTotalCart();
     renderProduct(items);
+    updateTotalMoneysidebar()
+    updateTotalMoney()
   }
 };
 
@@ -186,8 +188,11 @@ renderProductSidebar(items)
 
 //Thanh toán
 $("#btn-payment").click(function(){
-  if(items.length == 0)
+  if(items.length == 0){
     alert("Không có sản phẩm nào trong giỏ hàng. Vui lòng chọn mua sản phẩm.");
+    url = "./index.php";
+    $(location).attr("href", url);
+  }
   else 
   {
     $(document).ready( function() {

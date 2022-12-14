@@ -91,7 +91,7 @@
       <div class="product-item-sidebar">
         <div class="container">
           <div class="row">
-            <div class="product-item d-flex border">
+            <!-- <div class="product-item d-flex border">
               <div class="image col-lg-4">
                 <img src="../public/img/T-Shirt/t6.png" alt="" />
               </div>
@@ -123,12 +123,12 @@
                   <h3 class="text-danger fw-bold text-start" >500.000 VND</h3>
                 </div>
               </div>
-            </div>
+            </div> -->
           </div>
         </div>
       </div>
       <div class="price-total d-flex justify-content-between border-top p-1">
-      <p>Tổng tiền: </p> <span class="text-danger fw-bold " id="total-money-sidebar">320.000 VND</span>  
+      <p>Tổng tiền: </p> <span class="text-danger fw-bold " id="total-money-sidebar">0 VND</span>  
       </div>
     <button class="cart-btn btn3">
       <a href="./cart.php">Xem giỏ hàng</a>

@@ -289,6 +289,22 @@ const getUrl = () => {
 };
 getUrl();
 
+var check = 0;
+//Radio button checked/uncheck
+$(document).on("click", "input[name='radioBtn']", function(){
+  thisRadio = $(this);
+  if (thisRadio.hasClass("imChecked")) {
+      thisRadio.removeClass("imChecked");
+      thisRadio.prop('checked', false);
+      check = 0;
+  } else { 
+      thisRadio.prop('checked', true);
+      thisRadio.addClass("imChecked");
+      check = 1;
+  };
+})
+
+//Lọc theo giá
 const filterPrices = document.querySelectorAll(".giaTien");
 let productFilterPrice = [];
 
@@ -304,7 +320,7 @@ function filterPrice(price1, price2) {
   renderCard(productFilterTrue);
 }
 
-// filter catgory
+//Lọc sản phẩm theo loại 
 let filterCatgory = document.querySelectorAll(".clothes");
 let productFilterRating = [];
 let checkedNumberRating = 0;
@@ -313,15 +329,65 @@ Array.from(filterCatgory).forEach((input) => {
     let inputValue = e.target.value;
     if (e.target.checked == true) {
       checkedNumberRating++;
+
       let productFilterTrue = products.filter((p) => {
         return p.category == inputValue;
       });
+      productFilterRating = []
       productFilterRating = productFilterRating.concat(productFilterTrue);
       renderCard(productFilterRating);
-    } else {
-      checkedNumberRating--;
+    }
+  })
+  var input = document.getElementById("myInput");
+  $(document).on("click", "input[value='Pants']", function(){
+    if (check == 0){
+      checkedNumberRating = 0;
+      productFilterRating = products;
       productFilterRating = productFilterRating.filter((p) => {
-        return p.category != inputValue;
+        
+        return p.category != input.value;
+      });
+      renderCard(productFilterRating);
+    }
+    if (checkedNumberRating == 0) {
+      renderCard(products);
+    }
+  });
+  $(document).on("click", "input[value='Tshirt']", function(){
+    if (check == 0){
+      checkedNumberRating = 0;
+      productFilterRating = products;
+
+      productFilterRating = productFilterRating.filter((p) => {
+        return p.category != input.value;
+      });
+      renderCard(productFilterRating);
+    }
+    if (checkedNumberRating == 0) {
+      renderCard(products);
+    }
+  });
+  $(document).on("click", "input[value='Jacket']", function(){
+    if (check == 0){
+      checkedNumberRating = 0;
+      productFilterRating = products;
+
+      productFilterRating = productFilterRating.filter((p) => {
+        return p.category != input.value;
+      });
+      renderCard(productFilterRating);
+    }
+    if (checkedNumberRating == 0) {
+      renderCard(products);
+    }
+  });
+  $(document).on("click", "input[value='Accessory']", function(){
+    if (check == 0){
+      checkedNumberRating = 0;
+      productFilterRating = products;
+
+      productFilterRating = productFilterRating.filter((p) => {
+        return p.category != input.value;
       });
       renderCard(productFilterRating);
     }
@@ -330,6 +396,25 @@ Array.from(filterCatgory).forEach((input) => {
     }
   });
 });
+
+
+//Search
+// let productFilterSearch = [];
+// $(document).ready(function(e) {
+//   $("#input1").on("keypress",function() {
+//       var value = $(this).val().toLowerCase();
+//       let productFilterTrue = products.filter((p) => {
+//         return p.category == value;
+//       });
+//       productFilterRating = productFilterRating.concat(productFilterTrue);
+//       renderCard(productFilterRating);
+//       $("#myUL").filter(function() {
+//           $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+//       });    
+      
+//   });
+// });
+
 
 renderProductSidebar(items);
 let inputValueName = document.querySelector(".sortAlphabetically");

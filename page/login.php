@@ -1,3 +1,20 @@
+<?php
+  session_start();
+  ob_start();
+  $_SESSION['loggedin'] = false;
+
+  include "./connect.php";
+  include "./user.php";
+  if(isset($_GET['dangnhap'])&&($_GET['dangnhap']=="dangnhap")){
+    // $UserName = $_GET('userName');
+    // $Pass = $_GET('pass');
+    // $Gmail = $_GET('gmail');
+    $UserName= $_GET['userName'];
+    $Pass=$_GET['pass'];
+    $Gmail= $_GET['gmail'];
+    checkUser($UserName, $Gmail, $Pass);
+  }
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -182,18 +199,18 @@
                 <div class="wapper-heading">
                   <h1>Đăng nhập</h1>
                 </div>
-                <form onsubmit="login()">
+                <form method="get">
                   <div class="input__field">
-                    <input id="username" type="text" placeholder="User Name" />
+                    <input id="username" type="text" placeholder="User Name" name="userName"/>
                   </div>
           
                   <div class="input__field">
-                    <input id="email" type="text" placeholder="Email" />
+                    <input id="email" type="text" placeholder="Email" name="gmail"/>
                   </div>
                   <div class="input__field">
-                    <input id="password" type="password" placeholder="Password" />
+                    <input id="password" type="password" placeholder="Password" name="pass"/>
                   </div>
-                  <button id="btn" class="btn btn-login">Đăng nhập</button>
+                  <button id="btn" class="btn btn-login" name="dangnhap" value="dangnhap">Đăng nhập</button>
                   <a href="signup.php" >Đăng ký</a>
                   
                 </form>
