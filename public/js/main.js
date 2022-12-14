@@ -8,6 +8,9 @@ const cardPantsEl = document.querySelector(".product-list-pants");
 const btnAddToCart = document.querySelector(".btn-add-to-cart");
 const searchInput = document.querySelector(".search-input");
 const searchFormInputEl = document.querySelector(".seach-input");
+const count_ = document.querySelector(".count");
+
+
 let items = getDataFromLocalStorage();
 const simple = (initial) => {
   let val = initial;
@@ -138,6 +141,7 @@ const deleteProduct = (id, size) => {
     items = items.filter((p) => p.id !== id);
     setDataToLocalStorage(items);
     updateTotalCart();//??Hàm nay ở đâu???
+    updateTotalMoneysidebar();
     renderProductSidebar(items);
   }
 };
@@ -241,10 +245,10 @@ const renderCardJacket = (arr) => {
                 <div class="size d-flex mx-1 mb-2">
                   <span class="fw-bold me-3">Kích cỡ:</span>
                 <div class="product-size mb-2">
-                    <span data-size = "S" class="select-size border py-1 px-2 border-dark me-2" >S</span>
-                    <span data-size = "M" class="select-size border py-1 px-2 border-dark me-2">M</span>
-                    <span data-size = "L" class="select-size border py-1 px-2 border-dark me-2">L</span>
-                    <span data-size = "XL" class="select-size border py-1 px-2 border-dark me-2">XL</span>
+                    <span data-size = "S" class="select-size border py-1 px-2 border-dark me-2" onclick="choseSize(this)">S</span>
+                    <span data-size = "M" class="select-size border py-1 px-2 border-dark me-2" onclick="choseSize(this)">M</span>
+                    <span data-size = "L" class="select-size border py-1 px-2 border-dark me-2" onclick="choseSize(this)">L</span>
+                    <span data-size = "XL" class="select-size border py-1 px-2 border-dark me-2" onclick="choseSize(this)">XL</span>
                 </div>
                 </div>
                 <div class="d-flex  align-items-center mb-2 flex-wrap">
@@ -276,13 +280,27 @@ const renderCardJacket = (arr) => {
   });
   cardJacketEl.innerHTML = html;
 };
+const choseSize = (ele) => {
+
+  const sizeEls = document.querySelectorAll(".product-size span");
+  Array.from(sizeEls).map((size) =>
+    size.classList.remove("selected", "bg-dark", "text-white")
+  );
+
+  ele.classList.add("selected", "bg-dark", "text-white");
+};
 const addCartJacket = (id) => {
+  const sizeSelectedEl = document.querySelector(".product-size .selected");
+  if (!sizeSelectedEl) {
+    alert("Vui lòng chọn size trước khi thêm vào giỏ hàng");
+    return;
+  }
   let product = products.find((p) => p.id == id);
   let item = {
     id: product.id,
     name: product.name,
     price: product.price,
-    size: "M",
+    size: sizeSelectedEl.innerText,
     image: product.images[0],
     count: 1,
   };
@@ -366,10 +384,10 @@ const renderCardTshirt = (arr) => {
               <div class="size d-flex mx-1 mb-2">
                 <span class="fw-bold me-3">Kích cỡ:</span>
               <div class="product-size mb-2">
-                  <span class="border py-1 px-2 border-dark me-2 select-size" >M</span>
-                  <span class="border py-1 px-2 border-dark me-2 select-size">S</span>
-                  <span class="border py-1 px-2 border-dark me-2 select-size">L</span>
-                  <span class="border py-1 px-2 border-dark me-2 select-size">XL</span>
+                  <span class="border py-1 px-2 border-dark me-2 select-size" onclick="choseSize(this)">M</span>
+                  <span class="border py-1 px-2 border-dark me-2 select-size" onclick="choseSize(this)">S</span>
+                  <span class="border py-1 px-2 border-dark me-2 select-size" onclick="choseSize(this)">L</span>
+                  <span class="border py-1 px-2 border-dark me-2 select-size" onclick="choseSize(this)">XL</span>
               </div>
               </div>
               <div class="d-flex  align-items-center mb-2 flex-wrap">
@@ -403,19 +421,24 @@ const renderCardTshirt = (arr) => {
 };
 // Thêm sản phẩm Tshirt vào cart
 let addCartTshirt = (id) => {
+  const sizeSelectedEl = document.querySelector(".product-size .selected");
+  if (!sizeSelectedEl) {
+    alert("Vui lòng chọn size trước khi thêm vào giỏ hàng");
+    return;
+  }
   let product = products.find((p) => p.id == id);
   let item = {
     id: product.id,
     name: product.name,
     price: product.price,
-    size: "M",
+    size: sizeSelectedEl.innerText,
     image: product.images[0],
     count: 1,
   };
   addItemToAdd(item);
   alert("Thêm vào giỏ hàng thành công");
-  // let productCartSideBar = getDataCartFromLocalStorage()
-  renderProductSidebar(productCartSideBar);
+  window.location.reload();
+  renderProductSidebar(items);
   updateTotalMoneysidebar();
 };
 
@@ -446,7 +469,7 @@ const renderCardPants = (arr) => {
               data-bs-target="#exampleModal${p.id}"
               role="button"
             >
-              <i class="fa-solid fa-bag-shopping"></i>
+              <i class="fa-solid fa-eye"></i>
             </button>
           </li>
         </ul>
@@ -496,10 +519,10 @@ const renderCardPants = (arr) => {
               <div class="size d-flex mx-1 mb-2">
                 <span class="fw-bold me-3">Kích cỡ:</span>
               <div class="product-size mb-2">
-                  <span class="border py-1 px-2 border-dark me-2 select-size" >M</span>
-                  <span class="border py-1 px-2 border-dark me-2 select-size">S</span>
-                  <span class="border py-1 px-2 border-dark me-2 select-size">L</span>
-                  <span class="border py-1 px-2 border-dark me-2 select-size">XL</span>
+                  <span class="border py-1 px-2 border-dark me-2 select-size" onclick="choseSize(this)">M</span>
+                  <span class="border py-1 px-2 border-dark me-2 select-size" onclick="choseSize(this)">S</span>
+                  <span class="border py-1 px-2 border-dark me-2 select-size" onclick="choseSize(this)">L</span>
+                  <span class="border py-1 px-2 border-dark me-2 select-size" onclick="choseSize(this)">XL</span>
               </div>
               </div>
               <div class="d-flex  align-items-center mb-2 flex-wrap">
@@ -532,19 +555,24 @@ const renderCardPants = (arr) => {
   cardPantsEl.innerHTML = html;
 };
 let addCartPants = (id) => {
+  const sizeSelectedEl = document.querySelector(".product-size .selected");
+  if (!sizeSelectedEl) {
+    alert("Vui lòng chọn size trước khi thêm vào giỏ hàng");
+    return;
+  }
   let product = products.find((p) => p.id == id);
   let item = {
     id: product.id,
     name: product.name,
     price: product.price,
-    size: "M",
+    size: sizeSelectedEl.innerText,
     image: product.images[0],
     count: 1,
   };
   addItemToAdd(item);
   alert("Thêm vào giỏ hàng thành công");
-  // let productCartSideBar = getDataCartFromLocalStorage()
-  renderProductSidebar(productCartSideBar);
+  window.location.reload();
+  renderProductSidebar(items);
   updateTotalMoneysidebar();
 };
 const formatMoney = (number) => {

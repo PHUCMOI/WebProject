@@ -124,7 +124,7 @@
       <div class="product-item-sidebar">
         <div class="container">
           <div class="row">
-            <div class="product-item d-flex border">
+            <!-- <div class="product-item d-flex border">
               <div class="image col-lg-4">
                 <img src="../public/img/T-Shirt/t6.png" alt="" />
               </div>
@@ -156,7 +156,7 @@
                   <h3 class="text-danger fw-bold text-start">500.000 VND</h3>
                 </div>
               </div>
-            </div>
+            </div> -->
           </div>
         </div>
       </div>
@@ -193,7 +193,7 @@
               <h2>Giỏ hàng của bạn</h2>
             </div>
             <p class="fst-italic message">
-              Hiện tại có 1 sản phẩm trong giỏ hàng
+              Hiện tại không có sản phẩm trong giỏ hàng
             </p>
             <div class="product-list">
               <div class="product-item d-flex border mb-4">

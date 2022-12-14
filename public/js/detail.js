@@ -72,7 +72,9 @@ const renderProductSidebar = () => {
                     <span class="px-2 d-inline-block fw-bold">${p.count}</span>
                     <span class="px-2 d-inline-block fw-bold bg-light" onclick="plusCount(${p.id}, '${p.size}')">+</span>
                 </span>
-                <button class="text-primary border-0 bg-transparent fw-light">
+                <button class="text-primary border-0 bg-transparent fw-light" onclick="deleteProduct(${
+                  p.id
+                }, '${p.size}')">
                   <span><i class="fa-solid fa-trash-can"></i></i></span>
               </button>
             </div>
@@ -103,6 +105,7 @@ btnAddToCart.addEventListener("click", (e) => {
   // Thêm vào giỏ hàng
   addItemToAdd(item);
   alert("Thêm vào giỏ hàng thành công");
+  window.location.reload();
   let getData = getDataFromLocalStorage()
   renderProductSidebar(getData)
   // window.location.assign("../../Degrey-Website/page/cart.php")
