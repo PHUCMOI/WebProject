@@ -1,14 +1,12 @@
 <?php
   session_start();
   ob_start();
-  $_SESSION['loggedin'] = false;
-
+  if(isset($_SESSION['loggedin'])){
+    header('location: index.php');
+  }
   include "./connect.php";
   include "./user.php";
   if(isset($_GET['dangnhap'])&&($_GET['dangnhap']=="dangnhap")){
-    // $UserName = $_GET('userName');
-    // $Pass = $_GET('pass');
-    // $Gmail = $_GET('gmail');
     $UserName= $_GET['userName'];
     $Pass=$_GET['pass'];
     $Gmail= $_GET['gmail'];
