@@ -1,11 +1,7 @@
 <?php
-  ini_set('display_errors', '1');
-  ini_set('display_startup_errors', '1');
-  error_reporting(E_ALL);
   session_start();
   ob_start();
-
-  if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
+  if (isset($_SESSION['loggedin'])) {
   }else{
     header('location: signup.php');
   }
@@ -21,6 +17,7 @@
       href="./img/favicon (2).ico"
       type="image/x-icon"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="icon" href="../public/img/favicon (2).ico" type="image/x-icon" />
     <title>DEGERY®</title>
 
@@ -74,6 +71,7 @@
             </ul>
           </div>
           <div class="header-action d-flex justify-content-around">
+          <a href="logout.php"><i class="fa fa-sign-out"></i></a>
             <div class="search-box">
               <input type="text" class="search-input" placeholder="Nhập sản phẩm tìm kiếm">
               <button class="search-btn">
