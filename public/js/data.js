@@ -134,13 +134,13 @@ let products = [
   },
   {
     id: 8,
-    name: "STARS SWEATSHIRT JACKET",
+    name: "Hoodie Degrey Basic",
     images: [
-      "https://i.postimg.cc/ncJK8Xrw/STARS-SWEATSHIRT-JACKET.webp",
-      "https://i.postimg.cc/FK73bcC1/STARS-SWEATSHIRT-JACKET1.webp",
-      "https://i.postimg.cc/XYNwJtwf/STARS-SWEATSHIRT-JACKET2.webp",
-      "https://i.postimg.cc/x1sLbgRW/STARS-SWEATSHIRT-JACKET3.webp",
-      "https://i.postimg.cc/XvmFsJtL/STARS-SWEATSHIRT-JACKET4.webp",
+      "https://i.postimg.cc/fTg5T7CN/Hoodie-Degrey-Basic.webp",
+      "https://i.postimg.cc/htzsJJZ7/Hoodie-Degrey-Basic1.webp",
+      "https://i.postimg.cc/zXMS1zDD/Hoodie-Degrey-Basic2.webp",
+      "https://i.postimg.cc/26m7X0k4/Hoodie-Degrey-Basic3.webp",
+      "https://i.postimg.cc/9Q7Pm6zd/Hoodie-Degrey-Basic4.webp",
     ],
     description:
       '• Chất liệu: vải nỉ bông Mô tả: hình in graphic "ClownZ" mặt trước và "22" mặt sau thiết kế theo phong cách Y2K, tag cao su Cyber Jester.Vải có độ co giãn, đàn hồi và tính ổn định cao.Bề mặt vải dày dặn, mềm mại, trơn láng, giữ nhiệt tốt cho cơ thể.',
@@ -153,13 +153,13 @@ let products = [
   },
   {
     id: 9,
-    name: "CLOWNZ LEOPARD ZIPPED HOODIE",
+    name: "Áo Jean Degrey Basic Đen",
     images: [
-      "https://i.postimg.cc/Lsb3gRRd/CLOWNZ-LEOPARD-ZIPPED-HOODIE.webp",
-      "https://i.postimg.cc/hjQb9wPX/CLOWNZ-LEOPARD-ZIPPED-HOODIE1.webp",
-      "https://i.postimg.cc/zf6TXjS8/CLOWNZ-LEOPARD-ZIPPED-HOODIE2.webp",
-      "https://i.postimg.cc/G2DGByqY/CLOWNZ-LEOPARD-ZIPPED-HOODIE3.webp",
-      "https://i.postimg.cc/66dCtC7x/CLOWNZ-LEOPARD-ZIPPED-HOODIE4.webp",
+      "https://i.postimg.cc/bJVJ7v0q/o-Jean-Degrey-Basic-en.webp",
+      "https://i.postimg.cc/wvjM4NmW/o-Jean-Degrey-Basic-en1.webp",
+      "https://i.postimg.cc/YS3jxRhG/o-Jean-Degrey-Basic-en2.webp",
+      "https://i.postimg.cc/PJLxTkKY/o-Jean-Degrey-Basic-en3.webp",
+      "https://i.postimg.cc/9fVrTKFH/o-Jean-Degrey-Basic-en4.webp",
     ],
     description:
       '• Chất liệu: Nỉ bông Mặt trước: hình in "skeleton in green fire"Mặt sau: hình in "flamy skull in green fire Vải có độ co giãn, đàn hồi và tính ổn định cao.Bề mặt vải dày dặn, mềm mại, trơn láng, giữ nhiệt tốt cho cơ thể.',
