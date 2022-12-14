@@ -1,23 +1,25 @@
 <?php
   session_start();
   ob_start();
-  $_SESSION['loggedin'] = false;
+  if(isset($_SESSION['loggedin'])){
+    header('location: index.php');
+  }
   if(isset($_GET['Submit'])&&($_GET['Submit']=="dangky"))
   {
-  include "./connect.php";
-  $UserName= $_GET['useName'];
-  $Pass=$_GET['pass'];
-  $Gmail= $_GET['gmail'];
-  $MaKH = $Gmail;
-  $str = "insert into khang values ('$MaKH', '$UserName','$Pass','$Gmail')";
-  if($connect->query($str)==true){
-  echo "<script type='text/javascript'>alert('Thêm thành công');</script>";
-  header('location: login.php');
-  }
-  else{
-    echo "<script type='text/javascript'>alert('Thêm không thành công');</script>";
-  }
-  $connect->close();
+    include "./connect.php";
+    $UserName= $_GET['useName'];
+    $Pass=$_GET['pass'];
+    $Gmail= $_GET['gmail'];
+    $MaKH = $Gmail;
+    $str = "insert into khang values ('$MaKH', '$UserName','$Pass','$Gmail')";
+    if($connect->query($str)==true){
+    echo "<script type='text/javascript'>alert('Thêm thành công');</script>";
+    header('location: login.php');
+    }
+    else{
+      echo "<script type='text/javascript'>alert('Thêm không thành công');</script>";
+    }
+    $connect->close();
   }
 ?>
 <!DOCTYPE html>
