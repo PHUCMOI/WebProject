@@ -576,7 +576,7 @@ let products = [
       "https://bizweb.dktcdn.net/100/414/728/files/straight-pants.jpg?v=1651634948469",
     tag: "New Arrival",
     sizes: ["S", "M"],
-    category: "ACCESSORY",
+    category: "Accessory",
   },
   {
     id: 32,
@@ -594,7 +594,7 @@ let products = [
       "https://bizweb.dktcdn.net/100/414/728/files/straight-pants.jpg?v=1651634948469",
     tag: "New Arrival",
     sizes: ["M"],
-    category: "ACCESSORY",
+    category: "Accessory",
   },
   {
     id: 33,
@@ -613,7 +613,7 @@ let products = [
       "https://file.hstatic.net/1000281824/file/ad9f09ca9a5658080147_b068cf372416476689d22c28c7199856_grande.jpg",
     tag: "Hot Item",
     sizes: ["Nhỏ", "Lớn"],
-    category: "ACCESSORY",
+    category: "Accessory",
   },
   {
     id: 34,
@@ -632,7 +632,7 @@ let products = [
       "https://maybalogiare.com/wp-content/uploads/2019/06/kich-thuoc-balo-4-1.jpg",
     tag: "New Arrival",
     sizes: ["Nhỏ"],
-    category: "ACCESSORY",
+    category: "Accessory",
   },
   {
     id: 35,
@@ -649,6 +649,6 @@ let products = [
       "https://maybalogiare.com/wp-content/uploads/2019/06/kich-thuoc-balo-4-1.jpg",
     tag: "New Arrival",
     sizes: ["L"],
-    category: "ACCESSORY",
+    category: "Accessory",
   },
 ];

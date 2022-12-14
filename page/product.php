@@ -56,7 +56,7 @@
           </div>
           <div class="header-action d-flex justify-content-around">
             <div class="search-box">
-              <input type="text" class="search-input" placeholder="Nhập sản phẩm tìm kiếm">
+              <input type="text" class="search-input" placeholder="Nhập sản phẩm tìm kiếm" id="input1">
               <button class="search-btn">
                 <i class="fa-solid fa-magnifying-glass"></i>
               </button>
@@ -243,10 +243,22 @@
                 <p>Lọc giá</p>
                 <ul data-bs-spy="scroll" data-bs-target="#list-example" data-bs-offset="0" class="scrollspy-example" tabindex="0">
                   <form>
+                  <li>
+                      <label for="price"
+                        ><input
+                        onchange="filterPrice(0, 1000000000)"
+                          type="radio"
+                          name="price"
+                          value="100000"
+                          class="giaTien"
+                          id="price"
+                        />Tất cả</label
+                      >
+                    </li>
                     <li>
                       <label for="price"
                         ><input
-                        onchange="filterPrice(100000)"
+                        onchange="filterPrice(0, 100000)"
                           type="radio"
                           name="price"
                           value="100000"
@@ -308,16 +320,16 @@
               </div>
               <div class="filter">
                 <p>Loại</p>
-                <ul>
+                <ul id="myUL">
                   <form>
                     <li>
                       <label for="jacket"
                         ><input
                           type="radio"
                           class="clothes"
-                          name="price"
+                          name="radioBtn"
                           value="Jacket"
-                          id="jacket"
+                          id="myInput"
                         />Áo Jacket</label
                       >
                     </li>
@@ -327,9 +339,9 @@
                           type="radio"
                           class="clothes"
 
-                          name="price"
+                          name="radioBtn"
                           value="Pants"
-                          id="pants"
+                          id="myInput"
                         />Quần</label
                       >
                     </li>
@@ -337,11 +349,11 @@
                       <label for="t-shirt"
                         ><input
                           type="radio"
-                          name="price"
+                          name="radioBtn"
                           class="clothes"
 
                           value="Tshirt"
-                          id="t-shirt"
+                          id="myInput"
                         />T-Shirt</label
                       >
                     </li>
@@ -349,11 +361,11 @@
                       <label for="other"
                         ><input
                           type="radio"
-                          name="price"
+                          name="radioBtn"
                           class="clothes"
 
-                          value="Other"
-                          id="other"
+                          value="Accessory"
+                          id="myInput"
                         />Phụ kiện khác</label
                       >
                     </li>
