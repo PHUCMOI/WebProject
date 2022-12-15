@@ -89,6 +89,7 @@ const productItemSidabar = document.querySelector(".product-item-sidebar");
 
 //Render các sản phẩm trong giỏ hàng
 const renderProductSidebar = () => {
+  items = getDataFromLocalStorage();
   if (items.length == 0) {
     productItemSidabar.innerHTML = "Chưa có sản phẩm";
     return;
@@ -306,9 +307,10 @@ const addCartJacket = (id) => {
   };
   addItemToAdd(item);
   alert("Thêm vào giỏ hàng thành công");
-  window.location.reload();
+  // window.location.reload();
   renderProductSidebar(items);
   updateTotalMoneysidebar();
+  // updateTotalCart();
 };
 
 const productTshirt = products.filter((p) => {
@@ -437,7 +439,6 @@ let addCartTshirt = (id) => {
   };
   addItemToAdd(item);
   alert("Thêm vào giỏ hàng thành công");
-  window.location.reload();
   renderProductSidebar(items);
   updateTotalMoneysidebar();
 };
@@ -571,7 +572,6 @@ let addCartPants = (id) => {
   };
   addItemToAdd(item);
   alert("Thêm vào giỏ hàng thành công");
-  window.location.reload();
   renderProductSidebar(items);
   updateTotalMoneysidebar();
 };

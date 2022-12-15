@@ -30,7 +30,6 @@ const addItemToAdd = item => {
     // TH1 : Id chưa có trong giỏ hàng => thêm mới
     // TH2 : Id đã tồn tại và size chưa tồn tại => Thêm mới
     // TH3 : Id và size tồn tại => Cập nhật số lượng
-
     // Lấy cart từ localStorage
     let shoppingCart = getDataFromLocalStorage();
 

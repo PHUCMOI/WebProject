@@ -71,7 +71,11 @@
             </ul>
           </div>
           <div class="header-action d-flex justify-content-around">
-          <a href="logout.php"><i class="fa fa-sign-out"></i></a>
+            <div class="logout-btn" style="
+                                    display: flex;
+                                    align-items: center;">
+                                    <a href="logout.php"><i class="fa fa-sign-out" style="font-size:24px"></i></a>
+            </div>
             <div class="search-box">
               <input type="text" class="search-input" placeholder="Nhập sản phẩm tìm kiếm">
               <button class="search-btn">
@@ -90,7 +94,7 @@
         </div>
       </div>
     </section>
-    <!-- <div id="overlay"></div> -->
+    <div id="overlay"></div>
     <section class="cart">
       <div class="cart-title d-flex justify-content-center border-bottom position-relative">
         <i class="fa-solid fa-cart-shopping"></i><h2>Giỏ hàng</h2>
@@ -266,14 +270,14 @@
         </div>
       </div>
     </section>
-    <!-- <section class="popup-coupon">
+    <section class="popup-coupon">
       <div class="popup-image position-relative" >
         <img src="../public/img/popup/popup-discount.png" alt="popup-discount-code">
         <button class="cancel-popup position-absolute top-0 start-100 translate-middle " >
           <i class="fa-solid fa-xmark"></i>
         </button>
       </div>
-    </section> -->
+    </section>
     <section class="card">
       <div class="container">
         <div class="jacket my-4">

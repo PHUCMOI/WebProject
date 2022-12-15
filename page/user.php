@@ -11,7 +11,6 @@
             $_SESSION['UserName'] = $UserName;
         }
         else{
-            $_SESSION['loggedin'] = false;
             echo "<script type='text/javascript'>alert('Tên đăng nhập hoặc mật khẩu không đúng');</script>";
         }
         $connect->close();
