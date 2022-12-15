@@ -100,7 +100,6 @@ let products = [
     images: [
       "https://bizweb.dktcdn.net/thumb/1024x1024/100/414/728/products/cz-0006-e7e7e881-084f-4637-8ffe-208b82461f4f.jpg?v=1639234057693",
       "https://bizweb.dktcdn.net/thumb/1024x1024/100/414/728/products/cz-0007-2.jpg?v=1639234059653",
-      "https://bizweb.dktcdn.net/thumb/1024x1024/100/414/728/products/cz-0024.jpg?v=1639234061050",
       "https://bizweb.dktcdn.net/thumb/1024x1024/100/414/728/products/cz-0027-bb32f50c-797b-4510-b9f8-4ee6448d4189.jpg?v=1639234063163",
       "https://bizweb.dktcdn.net/thumb/1024x1024/100/414/728/products/cz-0025-c4193980-e928-4adf-b655-cec4ff265788.jpg?v=1639234064970",
     ],

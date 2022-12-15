@@ -100,6 +100,11 @@ let discountCode = {
   DEGREYRATYEUBAN: 20,
   HANOIKHONGVOIDUOCDAU: 30,
   DEGREYVIETNAM: 40,
+  ABC: 5,
+  VANCHUYENTAIDEGREY: 5,
+  HANOIFREESHIP: 10,
+  BIGBILLDISCOUNT: 5,
+  BIGBILLDISCOUNT: 10,
 };
 const checkDiscountCode = () => {
   let value = discountInput.value;

@@ -215,7 +215,7 @@
                 <p>Áp mã để nhận ngay ưu đãi giảm giá vận chuyển tại Degrey</p>
               </div>
               <div class="daily-copyright">
-                <button class="btn-test" data-disscount="ABC">
+                <button class="btn-test" data-disscount="VANCHUYENTAIDEGREY">
                   Sao chép mã
                 </button>
               </div>
@@ -230,7 +230,7 @@
                 <p>Degrey dành tặng Hà Nội mã freeship 0đ (số lượng có hạn)</p>
               </div>
               <div class="daily-copyright">
-                <button class="btn-test" data-disscount="ABCD">
+                <button class="btn-test" data-disscount="HANOIFREESHIP">
                   Sao chép mã
                 </button>
               </div>
@@ -239,13 +239,13 @@
           <div class="col-lg-3 col-sm-6 py-2">
             <div class="daily-card">
               <div class="daily-title">
-                <h3>Tặng 125.000đ</h3>
+                <h3>Giảm giá 5%</h3>
               </div>
               <div class="daily-content">
                 <p>Áp dụng đặc biệt cho đơn hàng từ 2,5 triệu đồng.</p>
               </div>
               <div class="daily-copyright">
-                <button class="btn-test" data-disscount="ABC">
+                <button class="btn-test" data-disscount="SMALLBILLDISCOUNT">
                   Sao chép mã
                 </button>
               </div>
@@ -260,7 +260,7 @@
                 <p>Mã giảm 10% cho hoá đơn mua hàng trên 5 triệu đồng</p>
               </div>
               <div class="daily-copyright">
-                <button class="btn-test" data-disscount="ABC">
+                <button class="btn-test" data-disscount="BIGBILLDISCOUNT">
                   Sao chép mã
                 </button>
               </div>
@@ -309,7 +309,7 @@
             <div class="col-lg-12">
               <div class="button-more d-flex justify-content-center">
                <button class="more-btn btn2">
-                 <a href="./product.php#Jacket"> xem thêm sản phẩm</a>
+                 <a href="./product.php"> xem thêm sản phẩm</a>
                </button>
               </div>
              </div>
@@ -342,7 +342,7 @@
             <div class="col-lg-12">
               <div class="button-more d-flex justify-content-center">
                <button class="more-btn btn2">
-                <a href="./product.php#Tshirt">xem thêm sản phẩm</a>
+                <a href="./product.php">xem thêm sản phẩm</a>
                </button>
               </div>
              </div>
@@ -379,7 +379,7 @@
             <div class="col-lg-12">
               <div class="button-more d-flex justify-content-center">
                <button class="more-btn btn2">
-                 <a href="./product.php#Pants">xem thêm sản phẩm</a>
+                 <a href="./product.php">xem thêm sản phẩm</a>
                </button>
               </div>
              </div>
